@@ -1,0 +1,3 @@
+[submodule "code-cassandra/libumdr"]
+	path = code-cassandra/libumdr
+	url = git@github.com:umdracing/libumdr.git

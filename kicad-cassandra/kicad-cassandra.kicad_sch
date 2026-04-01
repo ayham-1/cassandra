@@ -4807,7 +4807,7 @@
 		)
 		(uuid "01a58e8c-0539-48b8-93b7-e95b7f5962d6")
 	)
-	(label "TGT_VCP_TX"
+	(label "TGT_VCP_RX"
 		(at 139.7 43.18 0)
 		(effects
 			(font
@@ -4815,7 +4815,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "02d9bf57-a78c-4933-862d-88a248a3f2f7")
+		(uuid "021501a5-ec15-48e7-ab89-de1f9f8c2f45")
 	)
 	(label "DISPLAY_SPI_SCLK"
 		(at 139.7 48.26 0)
@@ -4917,15 +4917,15 @@
 		)
 		(uuid "26016253-6013-4c16-a1b5-023b88d5879c")
 	)
-	(label "HOST_VCP_RX"
-		(at 139.7 58.42 0)
+	(label "TGT_VCP_TX"
+		(at 139.7 40.64 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "2dc219b5-e031-431c-89bd-a8760ca6fda9")
+		(uuid "27043c9a-303c-41e0-9992-4780be47caf0")
 	)
 	(label "uSD_D2"
 		(at 190.5 90.17 180)
@@ -4936,6 +4936,16 @@
 			(justify right bottom)
 		)
 		(uuid "343c3ef2-ae3f-44ff-a796-50325c90004e")
+	)
+	(label "HOST_VCP_RX"
+		(at 139.7 60.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "43160d72-12c7-4343-96a9-e71d54761d74")
 	)
 	(label "TGT_VCP_RX"
 		(at 59.69 158.75 0)
@@ -5106,16 +5116,6 @@
 			(justify right bottom)
 		)
 		(uuid "8de6045c-90aa-4794-8929-226c0fba49db")
-	)
-	(label "HOST_VCP_TX"
-		(at 139.7 60.96 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "96ebd508-6d72-4d0c-a44c-fac52d1f6eb2")
 	)
 	(label "TGT_SWDIO"
 		(at 59.69 151.13 0)
@@ -5357,16 +5357,6 @@
 		)
 		(uuid "e059f20b-e7f5-4150-baa7-c8247271ac0c")
 	)
-	(label "TGT_VCP_RX"
-		(at 139.7 40.64 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "e06a6dac-bf8b-49d2-ba67-0e81ac6daacd")
-	)
 	(label "uSD_CLK"
 		(at 190.5 82.55 180)
 		(effects
@@ -5396,6 +5386,16 @@
 			(justify right bottom)
 		)
 		(uuid "e66ac412-4d5c-452c-9eb7-4858629b6d8d")
+	)
+	(label "HOST_VCP_TX"
+		(at 139.7 58.42 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e7b47607-7bb4-44cf-b5f1-814d13ee38c3")
 	)
 	(label "uSD_CMD"
 		(at 190.5 85.09 180)

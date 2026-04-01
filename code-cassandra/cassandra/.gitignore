@@ -1,0 +1,20 @@
+# eclipse specific git ignore
+.metadata/
+RemoteSystemsTempFiles/
+Debug/
+Release/
+*.launch
+
+# STM32 git ignore
+*.mxproject
+
+# cmakelists
+.build
+.cache/*
+
+# analysis
+.venv
+*.csv
+*.bin
+
+*.bkp
