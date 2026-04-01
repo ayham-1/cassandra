@@ -1,0 +1,5 @@
+- https://qcentlabs.com/posts/swd_banger/
+- https://github.com/devanlai/dap42
+- https://github.com/devanlai/dap42-hardware
+- https://hackaday.com/2023/08/07/all-about-usb-c-example-circuits/
+- https://www.peak-system.com/PCAN-Adapter-D-Sub-for-DR-Products.316.0.html?L=1
