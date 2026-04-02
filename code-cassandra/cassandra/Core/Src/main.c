@@ -249,7 +249,7 @@ int main(void)
   MX_TIM2_Init();
   MX_RTC_Init();
   /* USER CODE BEGIN 2 */
-
+  HAL_GPIO_WritePin(DISPLAY_ACTIVE_LOW_RESET_GPIO_Port, DISPLAY_ACTIVE_LOW_RESET_Pin, GPIO_PIN_SET);
   /* USER CODE END 2 */
 
   /* Init scheduler */
@@ -263,8 +263,7 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  HAL_GPIO_WritePin(DISPLAY_ACTIVE_LOW_RESET_GPIO_Port, DISPLAY_ACTIVE_LOW_RESET_Pin, GPIO_PIN_SET);
-  Init_OLED();
+
   while (1)
   {
     /* USER CODE END WHILE */
