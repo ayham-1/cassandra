@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "cassandra")
-		(date "2025-11-22")
-		(rev "rev0")
+		(date "2026-04-16")
+		(rev "rev3")
 		(company "by ayham")
 		(comment 1 "sapientia")
 		(comment 4 "USB Specifics")
@@ -1146,6 +1146,225 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "cassandra:691401700002B"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at -4.99 -1.205 0)
+				(effects
+					(font
+						(size 1.016 0.8636)
+					)
+					(justify right bottom)
+				)
+			)
+			(property "Value" ""
+				(at -4.95 -3.01 0)
+				(effects
+					(font
+						(size 1.016 0.8636)
+					)
+					(justify right bottom)
+				)
+			)
+			(property "Footprint" "cassandra:CONN4_05010302_WRE"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "WR-TBL Serie 401B - 5.00 mm Screwless Vertical Entry - 2.0 mm 2 Wires\n\nKIND PROPERTIES\n\nPitch 5 mm\n\nMATERIAL PROPERTIES\n\nInsulator Material PA66\nInsulator Flammability Rating UL94 V-0\nContact Material Brass\nContact Plating Tin\nWire Guard Material Stainless Steel\n\nGENERAL INFORMATION\n\nOperating Temperature -40 up to +105 °C\nCompliance RoHS\n\nELECTRICAL PROPERTIES\n\nIR cULus 10 A\nIR VDE 16 A\nWorking Voltage [cULus] 300 V (AC)\nWorking Voltage [VDE] 450 V (AC)\nWithstanding Voltage [cULus] 2000 V (AC)\nContact Resistance [cULus] 20 mΩ\nContact Resistance [VDE] 20 mΩ\n\nMechanical Properties\n\nWire Strip Length 9 up to 10 (mm)\n\nWire Properties\n\nSolid Wire Section (AWG) 14 to 24 (AWG)\nSolid Wire Section (Metric) 2.08 to 0.205 (mm²)\nStranded Wire Section (AWG) 14 to 24 (AWG)\nStranded Wire Section (Metric) 2.08 to 0.205 (mm²)\n\nCERTIFICATION\n\ncULus Approval E315414\nVDE Approval 40036896\n\nPackaging Properties\n\nPackaging Box\n\nhttps://www.we-online.com/catalog/media/o33321v209%20Family_WR-TBL_6914017000xxB.jpg\n\nDetails see: https://www.we-online.com/catalog/en/TBL_5_00_401B_SCREWLESS_VERTICAL_ENTRY_2_0MM2_WIRES_6914017000XXB/ https://www.we-online.com/catalog/en/TBL_5_00_401B_SCREWLESS_VERTICAL_ENTRY_2_0MM2_WIRES_6914017000XXB/\n\nUpdated by Ella Wu  2019-12-31\n2019(C) Wurth Elektronik"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "691401700002B_1_0"
+				(polyline
+					(pts
+						(xy -3.81 0) (xy -3.81 -2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.81 -2.54) (xy 1.27 -2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center -2.54 -1.27)
+					(radius 0.4445)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -1.778) (xy -2.54 -2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 -1.27)
+					(radius 0.4445)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -1.778) (xy 0 -2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -3.81 0)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -2.54) (xy 1.27 0)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -2.54 -5.08 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -2.54 -5.08 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "A1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -5.08 90)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -5.08 90)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "A2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:+3.3V"
 			(power)
 			(pin_numbers
@@ -1612,6 +1831,12 @@
 		(uuid "31b25433-f2f6-4a54-8573-ca9a475a4776")
 	)
 	(junction
+		(at 175.26 78.74)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "38db8abb-4fb6-4239-8195-28078fb86593")
+	)
+	(junction
 		(at 137.16 81.28)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1689,6 +1914,16 @@
 	)
 	(wire
 		(pts
+			(xy 165.1 78.74) (xy 175.26 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "014208e8-6159-4168-b928-6c8f5ec02bcd")
+	)
+	(wire
+		(pts
 			(xy 119.38 73.66) (xy 129.54 73.66)
 		)
 		(stroke
@@ -1729,7 +1964,7 @@
 	)
 	(wire
 		(pts
-			(xy 175.26 77.47) (xy 175.26 80.01)
+			(xy 175.26 77.47) (xy 175.26 78.74)
 		)
 		(stroke
 			(width 0)
@@ -1899,6 +2134,16 @@
 	)
 	(wire
 		(pts
+			(xy 156.21 78.74) (xy 156.21 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "78ab39b3-f84c-4622-91b3-6b3d67058dc9")
+	)
+	(wire
+		(pts
 			(xy 110.49 88.9) (xy 111.76 88.9)
 		)
 		(stroke
@@ -1909,6 +2154,16 @@
 	)
 	(wire
 		(pts
+			(xy 175.26 78.74) (xy 175.26 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "81c779cd-ac2c-4ac2-acd2-ba4c9955f650")
+	)
+	(wire
+		(pts
 			(xy 110.49 81.28) (xy 129.54 81.28)
 		)
 		(stroke
@@ -1916,6 +2171,16 @@
 			(type default)
 		)
 		(uuid "8d792489-2c93-42b0-80f2-dc9adb6e6e68")
+	)
+	(wire
+		(pts
+			(xy 162.56 78.74) (xy 156.21 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8fa04ea2-a34b-4f23-9757-5890e75e33f0")
 	)
 	(wire
 		(pts
@@ -2058,17 +2323,6 @@
 		)
 		(uuid "342bbae8-6733-437d-b6d7-bc6242fede44")
 	)
-	(hierarchical_label "USB_CC2_READ"
-		(shape input)
-		(at 125.73 81.28 270)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "6b66c1ea-2ab0-44af-9d94-a77ffe250ee9")
-	)
 	(hierarchical_label "USB_D+"
 		(shape input)
 		(at 113.03 92.71 0)
@@ -2079,17 +2333,6 @@
 			(justify left)
 		)
 		(uuid "c72beeea-23d7-4637-8cd3-1eb19e7f089e")
-	)
-	(hierarchical_label "USB_CC1_READ"
-		(shape input)
-		(at 125.73 73.66 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "fed29750-0091-46ae-b0da-e9d1c54555c9")
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
@@ -2432,6 +2675,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 156.21 82.55 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "92989fb3-7ce3-4270-bc62-a23da1d8b9a8")
+		(property "Reference" "#PWR011"
+			(at 156.21 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 156.21 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 156.21 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 156.21 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 156.21 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4b4464a1-19fb-4a6d-8abc-e31f48fe5152")
+		)
+		(instances
+			(project "kicad-cassandra"
+				(path "/dc25841e-5b7b-45f5-9f4d-5995b2d288b6/9d8f6675-6f97-45cd-aead-a18f3375a83a"
+					(reference "#PWR011")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:PWR_FLAG")
 		(at 95.25 113.03 270)
 		(unit 1)
@@ -2560,6 +2869,82 @@
 			(project "sapientia"
 				(path "/dc25841e-5b7b-45f5-9f4d-5995b2d288b6/9d8f6675-6f97-45cd-aead-a18f3375a83a"
 					(reference "#PWR013")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "cassandra:691401700002B")
+		(at 165.1 83.82 0)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b981f1fe-d6d7-4cd9-b8e4-dbdc8b633b4e")
+		(property "Reference" "J8"
+			(at 160.02 81.28 0)
+			(effects
+				(font
+					(size 1.016 0.8636)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "~"
+			(at 160.02 83.82 0)
+			(effects
+				(font
+					(size 1.016 0.8636)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "cassandra:CONN4_05010302_WRE"
+			(at 165.1 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 165.1 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "WR-TBL Serie 401B - 5.00 mm Screwless Vertical Entry - 2.0 mm 2 Wires\n\nKIND PROPERTIES\n\nPitch 5 mm\n\nMATERIAL PROPERTIES\n\nInsulator Material PA66\nInsulator Flammability Rating UL94 V-0\nContact Material Brass\nContact Plating Tin\nWire Guard Material Stainless Steel\n\nGENERAL INFORMATION\n\nOperating Temperature -40 up to +105 °C\nCompliance RoHS\n\nELECTRICAL PROPERTIES\n\nIR cULus 10 A\nIR VDE 16 A\nWorking Voltage [cULus] 300 V (AC)\nWorking Voltage [VDE] 450 V (AC)\nWithstanding Voltage [cULus] 2000 V (AC)\nContact Resistance [cULus] 20 mΩ\nContact Resistance [VDE] 20 mΩ\n\nMechanical Properties\n\nWire Strip Length 9 up to 10 (mm)\n\nWire Properties\n\nSolid Wire Section (AWG) 14 to 24 (AWG)\nSolid Wire Section (Metric) 2.08 to 0.205 (mm²)\nStranded Wire Section (AWG) 14 to 24 (AWG)\nStranded Wire Section (Metric) 2.08 to 0.205 (mm²)\n\nCERTIFICATION\n\ncULus Approval E315414\nVDE Approval 40036896\n\nPackaging Properties\n\nPackaging Box\n\nhttps://www.we-online.com/catalog/media/o33321v209%20Family_WR-TBL_6914017000xxB.jpg\n\nDetails see: https://www.we-online.com/catalog/en/TBL_5_00_401B_SCREWLESS_VERTICAL_ENTRY_2_0MM2_WIRES_6914017000XXB/ https://www.we-online.com/catalog/en/TBL_5_00_401B_SCREWLESS_VERTICAL_ENTRY_2_0MM2_WIRES_6914017000XXB/\n\nUpdated by Ella Wu  2019-12-31\n2019(C) Wurth Elektronik"
+			(at 165.1 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "A2"
+			(uuid "f76befd5-2ad4-4a6c-959a-bb84a9c7d7e4")
+		)
+		(pin "2"
+			(uuid "0d011269-d706-4c3b-8ff0-72effd02fcdc")
+		)
+		(pin "A1"
+			(uuid "e63afb7c-f436-47b1-af80-c8bbc65888cd")
+		)
+		(pin "1"
+			(uuid "f518eed0-29e3-4d0e-835a-8a08648d2cb4")
+		)
+		(instances
+			(project "kicad-cassandra"
+				(path "/dc25841e-5b7b-45f5-9f4d-5995b2d288b6/9d8f6675-6f97-45cd-aead-a18f3375a83a"
+					(reference "J8")
 					(unit 1)
 				)
 			)

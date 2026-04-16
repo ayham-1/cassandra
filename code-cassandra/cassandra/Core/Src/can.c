@@ -1,27 +1,27 @@
 /* USER CODE BEGIN Header */
 /**
-  ******************************************************************************
-  * @file    can.c
-  * @brief   This file provides code for the configuration
-  *          of the CAN instances.
-  ******************************************************************************
-  * @attention
-  *
-  * Copyright (c) 2026 STMicroelectronics.
-  * All rights reserved.
-  *
-  * This software is licensed under terms that can be found in the LICENSE file
-  * in the root directory of this software component.
-  * If no LICENSE file comes with this software, it is provided AS-IS.
-  *
-  ******************************************************************************
-  */
+ ******************************************************************************
+ * @file    can.c
+ * @brief   This file provides code for the configuration
+ *          of the CAN instances.
+ ******************************************************************************
+ * @attention
+ *
+ * Copyright (c) 2026 STMicroelectronics.
+ * All rights reserved.
+ *
+ * This software is licensed under terms that can be found in the LICENSE file
+ * in the root directory of this software component.
+ * If no LICENSE file comes with this software, it is provided AS-IS.
+ *
+ ******************************************************************************
+ */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "can.h"
 
 /* USER CODE BEGIN 0 */
-
+#include "state.h"
 /* USER CODE END 0 */
 
 CAN_HandleTypeDef hcan2;
@@ -44,7 +44,7 @@ void MX_CAN2_Init(void)
   hcan2.Init.TimeSeg1 = CAN_BS1_15TQ;
   hcan2.Init.TimeSeg2 = CAN_BS2_2TQ;
   hcan2.Init.TimeTriggeredMode = DISABLE;
-  hcan2.Init.AutoBusOff = DISABLE;
+  hcan2.Init.AutoBusOff = ENABLE;
   hcan2.Init.AutoWakeUp = ENABLE;
   hcan2.Init.AutoRetransmission = ENABLE;
   hcan2.Init.ReceiveFifoLocked = DISABLE;
@@ -91,6 +91,8 @@ void HAL_CAN_MspInit(CAN_HandleTypeDef* canHandle)
     HAL_NVIC_EnableIRQ(CAN2_RX0_IRQn);
     HAL_NVIC_SetPriority(CAN2_RX1_IRQn, 5, 0);
     HAL_NVIC_EnableIRQ(CAN2_RX1_IRQn);
+    HAL_NVIC_SetPriority(CAN2_SCE_IRQn, 5, 0);
+    HAL_NVIC_EnableIRQ(CAN2_SCE_IRQn);
   /* USER CODE BEGIN CAN2_MspInit 1 */
 
   /* USER CODE END CAN2_MspInit 1 */
@@ -119,6 +121,7 @@ void HAL_CAN_MspDeInit(CAN_HandleTypeDef* canHandle)
     HAL_NVIC_DisableIRQ(CAN2_TX_IRQn);
     HAL_NVIC_DisableIRQ(CAN2_RX0_IRQn);
     HAL_NVIC_DisableIRQ(CAN2_RX1_IRQn);
+    HAL_NVIC_DisableIRQ(CAN2_SCE_IRQn);
   /* USER CODE BEGIN CAN2_MspDeInit 1 */
 
   /* USER CODE END CAN2_MspDeInit 1 */
@@ -126,6 +129,28 @@ void HAL_CAN_MspDeInit(CAN_HandleTypeDef* canHandle)
 }
 
 /* USER CODE BEGIN 1 */
+void
+HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef * hcan)
+{
+    umdr_caninput_handle_interrupt(&state.can_input, CAN_FILTER_FIFO0);
+}
 
+void
+HAL_CAN_RxFifo1MsgPendingCallback(CAN_HandleTypeDef * hcan)
+{
+    umdr_caninput_handle_interrupt(&state.can_input, CAN_FILTER_FIFO1);
+}
+
+void
+HAL_CAN_TxMailbox0CompleteCallback(CAN_HandleTypeDef * hcan)
+{
+    //umdr_canoutput_free_mailbox_handler(&state.can_output);
+}
+
+void
+HAL_CAN_TxMailbox1CompleteCallback(CAN_HandleTypeDef * hcan)
+{
+    //umdr_canoutput_free_mailbox_handler(&state.can_output);
+}
 /* USER CODE END 1 */
 

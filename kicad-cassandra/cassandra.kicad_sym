@@ -2,6 +2,225 @@
 	(version 20241209)
 	(generator "kicad_symbol_editor")
 	(generator_version "9.0")
+	(symbol "691401700002B"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "J"
+			(at -4.99 -1.205 0)
+			(effects
+				(font
+					(size 1.016 0.8636)
+				)
+				(justify right bottom)
+			)
+		)
+		(property "Value" ""
+			(at -4.95 -3.01 0)
+			(effects
+				(font
+					(size 1.016 0.8636)
+				)
+				(justify right bottom)
+			)
+		)
+		(property "Footprint" "cassandra:CONN4_05010302_WRE"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "WR-TBL Serie 401B - 5.00 mm Screwless Vertical Entry - 2.0 mm 2 Wires\n\nKIND PROPERTIES\n\nPitch 5 mm\n\nMATERIAL PROPERTIES\n\nInsulator Material PA66\nInsulator Flammability Rating UL94 V-0\nContact Material Brass\nContact Plating Tin\nWire Guard Material Stainless Steel\n\nGENERAL INFORMATION\n\nOperating Temperature -40 up to +105 °C\nCompliance RoHS\n\nELECTRICAL PROPERTIES\n\nIR cULus 10 A\nIR VDE 16 A\nWorking Voltage [cULus] 300 V (AC)\nWorking Voltage [VDE] 450 V (AC)\nWithstanding Voltage [cULus] 2000 V (AC)\nContact Resistance [cULus] 20 mΩ\nContact Resistance [VDE] 20 mΩ\n\nMechanical Properties\n\nWire Strip Length 9 up to 10 (mm)\n\nWire Properties\n\nSolid Wire Section (AWG) 14 to 24 (AWG)\nSolid Wire Section (Metric) 2.08 to 0.205 (mm²)\nStranded Wire Section (AWG) 14 to 24 (AWG)\nStranded Wire Section (Metric) 2.08 to 0.205 (mm²)\n\nCERTIFICATION\n\ncULus Approval E315414\nVDE Approval 40036896\n\nPackaging Properties\n\nPackaging Box\n\nhttps://www.we-online.com/catalog/media/o33321v209%20Family_WR-TBL_6914017000xxB.jpg\n\nDetails see: https://www.we-online.com/catalog/en/TBL_5_00_401B_SCREWLESS_VERTICAL_ENTRY_2_0MM2_WIRES_6914017000XXB/ https://www.we-online.com/catalog/en/TBL_5_00_401B_SCREWLESS_VERTICAL_ENTRY_2_0MM2_WIRES_6914017000XXB/\n\nUpdated by Ella Wu  2019-12-31\n2019(C) Wurth Elektronik"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "691401700002B_1_0"
+			(polyline
+				(pts
+					(xy -3.81 0) (xy -3.81 -2.54)
+				)
+				(stroke
+					(width 0.254)
+					(type solid)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -3.81 -2.54) (xy 1.27 -2.54)
+				)
+				(stroke
+					(width 0.254)
+					(type solid)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center -2.54 -1.27)
+				(radius 0.4445)
+				(stroke
+					(width 0.254)
+					(type solid)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.54 -1.778) (xy -2.54 -2.54)
+				)
+				(stroke
+					(width 0.254)
+					(type solid)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center 0 -1.27)
+				(radius 0.4445)
+				(stroke
+					(width 0.254)
+					(type solid)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 -1.778) (xy 0 -2.54)
+				)
+				(stroke
+					(width 0.254)
+					(type solid)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.27 0) (xy -3.81 0)
+				)
+				(stroke
+					(width 0.254)
+					(type solid)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.27 -2.54) (xy 1.27 0)
+				)
+				(stroke
+					(width 0.254)
+					(type solid)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -2.54 -5.08 90)
+				(length 2.54)
+				(name "1"
+					(effects
+						(font
+							(size 0 0)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 0 0)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -2.54 -5.08 90)
+				(length 2.54)
+				(name "1"
+					(effects
+						(font
+							(size 0 0)
+						)
+					)
+				)
+				(number "A1"
+					(effects
+						(font
+							(size 0 0)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -5.08 90)
+				(length 2.54)
+				(name "2"
+					(effects
+						(font
+							(size 0 0)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 0 0)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -5.08 90)
+				(length 2.54)
+				(name "2"
+					(effects
+						(font
+							(size 0 0)
+						)
+					)
+				)
+				(number "A2"
+					(effects
+						(font
+							(size 0 0)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
 	(symbol "831024589"
 		(exclude_from_sim no)
 		(in_bom yes)

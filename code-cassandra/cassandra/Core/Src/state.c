@@ -1,5 +1,7 @@
 #include "state.h"
 
+#include "can.h"
+
 #include "impl_display.h"
 
 #include <umdr/display/fonts/ibm_plex_mono_22pt.h>
@@ -59,6 +61,47 @@ struct cassandra_pcb_state state = {
 void
 cassandra_pcb_init(void)
 {
+    state.can_in_filters[0] = (CAN_FilterTypeDef){
+        .FilterBank           = 0,
+        .FilterMode           = CAN_FILTERMODE_IDMASK,
+        .FilterScale          = CAN_FILTERSCALE_32BIT,
+        .FilterIdHigh         = 0x0,
+        .FilterIdLow          = 0x0,
+        .FilterMaskIdHigh     = 0x0,
+        .FilterMaskIdLow      = 0x0,
+        .FilterFIFOAssignment = CAN_RX_FIFO0,
+        .FilterActivation     = ENABLE,
+        .SlaveStartFilterBank = 0,
+    };
+    state.can_ins[0] = (struct UMDR_CanInputSysEntry){
+        .frames = xQueueCreate(45, sizeof(struct UMDR_CanFrame)),
+        .canid  = 0,
+    };
+    state.hcan_ext  = &hcan2;
+    state.can_input = (struct UMDR_CanInputSys){
+        .name = "can_output",
+        .hcan = state.hcan_ext,
+
+        .count              = cassandra_pcb_can_in_entries_cnt,
+        .entries            = &state.can_ins[0],
+        .filters            = &state.can_in_filters[0],
+        .filter_count      = cassandra_pcb_can_in_filters_cnt,
+        .queue_wait_time_ms = 10,
+        .queue_length       = 45,
+    };
+
+    umdr_caninput_init(&state.can_input);
+
+    if (HAL_CAN_Start(&hcan2) != HAL_OK)
+        Error_Handler();
+
+    if (HAL_CAN_ActivateNotification(&hcan2, CAN_IT_RX_FIFO0_MSG_PENDING) != HAL_OK)
+        Error_Handler();
+    if (HAL_CAN_ActivateNotification(&hcan2, CAN_IT_RX_FIFO1_MSG_PENDING) != HAL_OK)
+        Error_Handler();
+    if (HAL_CAN_ActivateNotification(&hcan2, CAN_IT_TX_MAILBOX_EMPTY) != HAL_OK)
+        Error_Handler();
+
     state.display_driver.driver.framebuffer0 = (struct UMDR_display_driver_fb){
         .ptr          = (void *)&state.framebuffer0[0][0],
         .format       = UMDR_display_driver_fb_rgb565,
@@ -95,7 +138,7 @@ cassandra_pcb_init(void)
 
     umdr_display_driver_assert_validity(&state.display_driver.driver);
     umdr_display_driver_ssd1353_init(&state.display_driver);
-	umdr_display_driver_data_write_completed(&state.display_driver.driver);
+    umdr_display_driver_data_write_completed(&state.display_driver.driver);
 
     state.graphics.display_driver = &state.display_driver.driver;
 
@@ -128,16 +171,17 @@ cassandra_pcb_init(void)
         .y = cassandra_pcb_display_height,
     };
 
-
     while (1)
     {
         umdr_graphics_rgb565_clear_framebuffer(&state.graphics, 0x00);
-        umdr_graphics_rgb565_draw_medium_text(&state.graphics, umdr_graphics_rgb565_color(45, 0, 23), text1_point, texts[0], strlen(texts[0]));
+        umdr_graphics_rgb565_draw_medium_text(
+            &state.graphics, umdr_graphics_rgb565_color(45, 0, 23), text1_point, texts[0], strlen(texts[0]));
 
         umdr_graphics_rgb565_draw_line(&state.graphics, umdr_graphics_rgb565_color(200, 0, 0), point1, point2);
         umdr_graphics_rgb565_draw_line(&state.graphics, umdr_graphics_rgb565_color(200, 0, 0), point3, point4);
 
         umdr_display_driver_commit(state.graphics.display_driver);
         umdr_display_driver_wait_till_writable(state.graphics.display_driver);
+        vTaskDelay(100);
     }
 }

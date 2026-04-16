@@ -7,21 +7,32 @@
 #include <umdr/display/drivers/ssd1353.h>
 #include <umdr/display/graphics_rgb565.h>
 
+#include <umdr/comm/can/input_system.h>
+
 enum cassandra_pcb_config : uint32_t
 {
     cassandra_pcb_display_width  = 160,
     cassandra_pcb_display_height = 128,
     cassandra_pcb_display_fps    = 15,
 
+    cassandra_pcb_display_partial = true,
+    cassandra_pcb_display_tiles   = 4,
 
-	cassandra_pcb_display_partial = true,
-	cassandra_pcb_display_tiles = 4,
+    cassandra_pcb_can_in_entries_cnt = 1,
+    cassandra_pcb_can_in_filters_cnt = 1,
 };
 
 struct cassandra_pcb_state
 {
-    volatile uint16_t framebuffer0[cassandra_pcb_display_height / cassandra_pcb_display_tiles][cassandra_pcb_display_width];
-    volatile uint16_t framebuffer1[cassandra_pcb_display_height / cassandra_pcb_display_tiles][cassandra_pcb_display_width];
+    volatile uint16_t framebuffer0[cassandra_pcb_display_height / cassandra_pcb_display_tiles]
+                                  [cassandra_pcb_display_width];
+    volatile uint16_t framebuffer1[cassandra_pcb_display_height / cassandra_pcb_display_tiles]
+                                  [cassandra_pcb_display_width];
+
+    CAN_HandleTypeDef * hcan_ext;
+    struct UMDR_CanInputSys can_input;
+    struct UMDR_CanInputSysEntry can_ins[cassandra_pcb_can_in_entries_cnt];
+    CAN_FilterTypeDef can_in_filters[cassandra_pcb_can_in_filters_cnt];
 
     struct UMDR_display_driver_ssd1353 display_driver;
     struct UMDR_graphics_rgb565 graphics;

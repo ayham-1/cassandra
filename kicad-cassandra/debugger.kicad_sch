@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "cassandra")
-		(date "2025-11-22")
-		(rev "rev0")
+		(date "2026-04-16")
+		(rev "rev3")
 		(company "by ayham")
 		(comment 1 "sapientia")
 		(comment 4 "Target Debugger Specifics")
