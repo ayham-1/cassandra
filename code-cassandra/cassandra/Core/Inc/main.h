@@ -57,16 +57,6 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define LED_BIT2_Pin GPIO_PIN_13
-#define LED_BIT2_GPIO_Port GPIOC
-#define LED_BIT1_Pin GPIO_PIN_14
-#define LED_BIT1_GPIO_Port GPIOC
-#define LED_BIT0_Pin GPIO_PIN_15
-#define LED_BIT0_GPIO_Port GPIOC
-#define USB_CC2_READ_Pin GPIO_PIN_0
-#define USB_CC2_READ_GPIO_Port GPIOC
-#define USB_CC1_READ_Pin GPIO_PIN_1
-#define USB_CC1_READ_GPIO_Port GPIOC
 #define TGT_SWDIO_Pin GPIO_PIN_2
 #define TGT_SWDIO_GPIO_Port GPIOC
 #define TGT_SWO_Pin GPIO_PIN_3
@@ -85,12 +75,13 @@ void Error_Handler(void);
 #define uSD_DET_GPIO_Port GPIOA
 #define PBT_0_Pin GPIO_PIN_5
 #define PBT_0_GPIO_Port GPIOB
+#define PBT_0_EXTI_IRQn EXTI9_5_IRQn
 #define PBT_1_Pin GPIO_PIN_6
 #define PBT_1_GPIO_Port GPIOB
+#define PBT_1_EXTI_IRQn EXTI9_5_IRQn
 #define PBT_2_Pin GPIO_PIN_7
 #define PBT_2_GPIO_Port GPIOB
-#define LED_BIT3_Pin GPIO_PIN_9
-#define LED_BIT3_GPIO_Port GPIOB
+#define PBT_2_EXTI_IRQn EXTI9_5_IRQn
 
 /* USER CODE BEGIN Private defines */
 

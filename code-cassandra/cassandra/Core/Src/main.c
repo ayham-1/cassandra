@@ -354,6 +354,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
+	return; // we don't actually call this, and when the HAL does (namely in SDIO) we don't want to crash the MCU
   /* User can add his own implementation to report the HAL error return state */
   __disable_irq();
   while (1)

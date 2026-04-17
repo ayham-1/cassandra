@@ -16,7 +16,7 @@ enum cassandra_pcb_config : uint32_t
     cassandra_pcb_display_fps    = 15,
 
     cassandra_pcb_display_partial = true,
-    cassandra_pcb_display_tiles   = 4,
+    cassandra_pcb_display_tiles   = 2,
 
     cassandra_pcb_can_in_entries_cnt = 1,
     cassandra_pcb_can_in_filters_cnt = 1,

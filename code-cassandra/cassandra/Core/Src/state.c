@@ -85,7 +85,7 @@ cassandra_pcb_init(void)
         .count              = cassandra_pcb_can_in_entries_cnt,
         .entries            = &state.can_ins[0],
         .filters            = &state.can_in_filters[0],
-        .filter_count      = cassandra_pcb_can_in_filters_cnt,
+        .filter_count       = cassandra_pcb_can_in_filters_cnt,
         .queue_wait_time_ms = 10,
         .queue_length       = 45,
     };
@@ -175,13 +175,13 @@ cassandra_pcb_init(void)
     {
         umdr_graphics_rgb565_clear_framebuffer(&state.graphics, 0x00);
         umdr_graphics_rgb565_draw_medium_text(
-            &state.graphics, umdr_graphics_rgb565_color(45, 0, 23), text1_point, texts[0], strlen(texts[0]));
+            &state.graphics, umdr_graphics_rgb565_color(255, 0, 0), text1_point, texts[0], strlen(texts[0]));
 
-        umdr_graphics_rgb565_draw_line(&state.graphics, umdr_graphics_rgb565_color(200, 0, 0), point1, point2);
-        umdr_graphics_rgb565_draw_line(&state.graphics, umdr_graphics_rgb565_color(200, 0, 0), point3, point4);
+        umdr_graphics_rgb565_draw_line(&state.graphics, umdr_graphics_rgb565_color(0, 255, 0), point1, point2);
+        umdr_graphics_rgb565_draw_line(&state.graphics, umdr_graphics_rgb565_color(0, 0, 255), point3, point4);
 
         umdr_display_driver_commit(state.graphics.display_driver);
         umdr_display_driver_wait_till_writable(state.graphics.display_driver);
-        vTaskDelay(100);
+        // vTaskDelay(100);
     }
 }
