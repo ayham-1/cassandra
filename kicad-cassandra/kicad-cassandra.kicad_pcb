@@ -9,8 +9,8 @@
 	(paper "A5" portrait)
 	(title_block
 		(title "cassandra")
-		(date "2026-04-01")
-		(rev "rev1")
+		(date "2026-04-18")
+		(rev "rev3")
 		(company "ayham")
 		(comment 4 "AISLER Project ID: YBHFPPAT")
 	)
@@ -6619,7 +6619,7 @@
 			(net 9 "/CAN/CAN_HIGH")
 			(pinfunction "1")
 			(pintype "passive")
-			(uuid "e344bb58-6a6f-46d0-8137-e3947669b515")
+			(uuid "e361749d-9540-4e02-b980-ef92f4919da1")
 		)
 		(pad "2" smd rect
 			(at 2.500122 -8.999997 270)
@@ -6637,7 +6637,7 @@
 			(net 10 "/CAN/CAN_LOW")
 			(pinfunction "2")
 			(pintype "passive")
-			(uuid "df41d089-a0d4-4c5b-b2cd-71a4accd51d2")
+			(uuid "83074e95-4578-4247-bfa2-bb161b4f1ce9")
 		)
 		(pad "5" smd rect
 			(at -3.749939 -6.299998 270)
@@ -7217,7 +7217,7 @@
 			(net 2 "GND")
 			(pinfunction "1")
 			(pintype "passive")
-			(uuid "3455c059-9c9a-4e4c-97c9-9e6ab2664341")
+			(uuid "38387b67-fe49-4d9c-b151-cb04f9384f38")
 		)
 		(pad "2" smd rect
 			(at 2.500122 -8.999997 180)
@@ -7235,7 +7235,7 @@
 			(net 4 "VDD")
 			(pinfunction "2")
 			(pintype "passive")
-			(uuid "336842b5-2c01-493d-a25b-0972bab90bda")
+			(uuid "debd726c-5d70-4ec0-b569-8823b8cc9d22")
 		)
 		(pad "5" smd rect
 			(at -3.749939 -6.299998 180)
