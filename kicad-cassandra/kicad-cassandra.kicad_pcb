@@ -11543,7 +11543,7 @@
 			(uuid "8b52ed07-16a7-4d0b-ae51-6db151ac58a1")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 1.27 -11.43 180)
+			(at 1.27 -11.43 0)
 			(layer "B.Fab")
 			(uuid "9ac8c7ac-3c32-4228-b0b6-68dd953fef5d")
 			(effects
@@ -11777,13 +11777,13 @@
 		(embedded_fonts no)
 		(model "${KICAD9_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_2x10_P2.54mm_Vertical.stpZ"
 			(offset
-				(xyz 0 0 0)
+				(xyz 2.5 0 -2)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz 0 0 0)
+				(xyz -0 180 -0)
 			)
 		)
 	)
