@@ -549,7 +549,7 @@
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "../cad-cassandra/kicad-cassandra.step",
       "svg": "",
       "vrml": ""
     },

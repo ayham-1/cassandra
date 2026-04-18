@@ -162,8 +162,6 @@ cassandra_pcb_init(void)
         "TESTS",
     };
 
-    const struct UMDR_graphics_point text1_sz =
-        umdr_graphics_paletted_size_medium_text(&state.graphics, texts[0], strlen(texts[0]));
     const struct UMDR_graphics_point text1_point = {
         .x = 0,
         .y = 0,
