@@ -29,7 +29,7 @@ struct cassandra_pcb_state
     volatile uint8_t framebuffer1[cassandra_pcb_display_height][cassandra_pcb_display_width / 2];
 
     volatile uint16_t unpacked_framebuffer[cassandra_pcb_display_height / cassandra_pcb_display_tiles]
-                                         [cassandra_pcb_display_width];
+                                          [cassandra_pcb_display_width];
 
     CAN_HandleTypeDef * hcan_ext;
     struct UMDR_CanInputSys can_input;
